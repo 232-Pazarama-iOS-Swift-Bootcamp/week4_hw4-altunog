@@ -11,10 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="FlickrApp" customModuleProvider="target">
             <connections>
-                <outlet property="passwordTF" destination="Ev2-s9-4UZ" id="OXf-lA-Gli"/>
-                <outlet property="signInButton" destination="6da-DG-QtM" id="ji5-uC-GQd"/>
-                <outlet property="signUpLabel" destination="TuR-uR-ndK" id="UEq-bg-fVO"/>
-                <outlet property="usernameTF" destination="YKS-iT-pi8" id="g5y-im-PZD"/>
+                <outlet property="emailField" destination="YKS-iT-pi8" id="UqU-l2-P4O"/>
+                <outlet property="passwordField" destination="Ev2-s9-4UZ" id="eLQ-t3-scS"/>
+                <outlet property="signInButton" destination="6da-DG-QtM" id="vJN-ND-CcH"/>
+                <outlet property="signUpTextButton" destination="drf-6I-xfr" id="v5e-sa-g9d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -50,21 +50,32 @@
                         <color key="titleColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="GZD-Rd-lga">
-                    <rect key="frame" x="71" y="761.66666666666663" width="251" height="20.333333333333371"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GZD-Rd-lga">
+                    <rect key="frame" x="72.666666666666671" y="749" width="247.66666666666663" height="33"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljP-f6-hDg">
-                            <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="20.333333333333332"/>
+                            <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuR-uR-ndK">
-                            <rect key="frame" x="187.66666666666669" y="0.0" width="63.333333333333343" height="20.333333333333332"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuR-uR-ndK">
+                            <rect key="frame" x="182.33333333333331" y="0.0" width="0.0" height="33"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" systemColor="systemPinkColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drf-6I-xfr">
+                            <rect key="frame" x="185.66666666666663" y="0.0" width="62" height="33"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Sign up">
+                                <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="signUpTextButtonTapped:" destination="-1" eventType="touchUpInside" id="9Zg-Rg-ryJ"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beq-Sx-ztZ">

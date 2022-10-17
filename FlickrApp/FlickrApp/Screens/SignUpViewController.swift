@@ -12,7 +12,11 @@ import Firebase
 
 class SignUpViewController: UIViewController {
 	
-	let signUpView = SignUpView()
+	private lazy var signUpView: SignUpView = {
+		let view = SignUpView()
+		view.delegate = self
+		return view
+	}()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,4 +32,15 @@ class SignUpViewController: UIViewController {
 		signUpView.passwordConfirmField.makeUnderlinedTextField()
 	}
 
+}
+
+extension SignUpViewController: SignUpViewDelegate {
+	func signUpView(_ view: SignUpView, didTapSignUpButton button: UIButton) {
+		print("sign up tapped")
+	}
+	
+	func signUpView(_ view: SignUpView, didTapCancelButton button: UIButton) {
+		print("cancel tapped")
+		dismiss(animated: true)
+	}
 }

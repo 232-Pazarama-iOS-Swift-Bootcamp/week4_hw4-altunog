@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol SignUpViewDelegate: AnyObject {
+	func signUpView(_ view: SignUpView, didTapSignUpButton button: UIButton)
+	func signUpView(_ view: SignUpView, didTapCancelButton button: UIButton)
+}
 
 class SignUpView: UIView {
+	
+	weak var delegate: SignUpViewDelegate?
 	
 	// MARK: - Properties
 	private let offset 			= 12
@@ -18,11 +24,14 @@ class SignUpView: UIView {
 	
 	// MARK: - UI Elements
 	private lazy var cancelButton: UIButton = {
-		let button = UIButton()
+		let button = UIButton(type: .system)
 		button.setTitle("Cancel", for: .normal)
 		button.titleLabel?.font = .systemFont(ofSize: 17)
 		button.setTitleColor(.systemPink, for: .normal)
 		button.backgroundColor = .none
+		button.addTarget(self,
+						 action: #selector(didTapCancelButton(_:)),
+						 for: .touchUpInside)
 		return button
 	}()
 	
@@ -59,12 +68,15 @@ class SignUpView: UIView {
 	}()
 	
 	private lazy var signUpButton: UIButton = {
-		let button = UIButton()
+		let button = UIButton(type: .system)
 		button.setTitle("Sign Up", for: .normal)
 		button.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
-		button.setTitleColor(.MyTheme.lightGray, for: .normal)
+		button.setTitleColor(.white, for: .normal)
 		button.backgroundColor = .systemPink
 		button.layer.cornerRadius = 8
+		button.addTarget(self,
+						 action: #selector(didTapSignUpButton(_:)),
+						 for: .touchUpInside)
 		return button
 	}()
 
@@ -154,4 +166,14 @@ class SignUpView: UIView {
 			make.trailing.equalTo(-1*leading)
 		}
 	}
+	
+	// MARK: - Delegate Methods
+	@objc private func didTapSignUpButton(_ button: UIButton) {
+		delegate?.signUpView(self, didTapSignUpButton: button)
+	}
+	
+	@objc private func didTapCancelButton(_ button: UIButton) {
+		delegate?.signUpView(self, didTapCancelButton: button)
+	}
 }
+
