@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	fileprivate func setupWindow() {
 		let window = UIWindow(frame: UIScreen.main.bounds)
-		let viewController = AuthViewController()
+		let viewController = SignInViewController()
 //		let navigationController = UINavigationController(rootViewController: viewController)
 		window.rootViewController = viewController
 		window.makeKeyAndVisible()

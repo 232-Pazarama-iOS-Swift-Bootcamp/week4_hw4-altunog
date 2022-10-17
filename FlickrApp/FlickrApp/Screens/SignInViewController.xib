@@ -9,12 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="FlickrApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="FlickrApp" customModuleProvider="target">
             <connections>
-                <outlet property="emailField" destination="YKS-iT-pi8" id="UqU-l2-P4O"/>
-                <outlet property="passwordField" destination="Ev2-s9-4UZ" id="eLQ-t3-scS"/>
-                <outlet property="signInButton" destination="6da-DG-QtM" id="vJN-ND-CcH"/>
-                <outlet property="signUpTextButton" destination="drf-6I-xfr" id="v5e-sa-g9d"/>
+                <outlet property="emailField" destination="YKS-iT-pi8" id="Owa-Yp-IE3"/>
+                <outlet property="passwordField" destination="Ev2-s9-4UZ" id="0PJ-Ua-mLs"/>
+                <outlet property="signInButton" destination="6da-DG-QtM" id="6QA-n2-vXj"/>
+                <outlet property="signUpTextButton" destination="drf-6I-xfr" id="imf-Lg-d5r"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -73,7 +73,7 @@
                                 <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="signUpTextButtonTapped:" destination="-1" eventType="touchUpInside" id="9Zg-Rg-ryJ"/>
+                                <action selector="signUpTextButtonTapped:" destination="-1" eventType="touchUpInside" id="LmP-d4-e4a"/>
                             </connections>
                         </button>
                     </subviews>

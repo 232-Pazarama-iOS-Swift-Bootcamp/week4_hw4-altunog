@@ -27,7 +27,7 @@ class SignUpView: UIView {
 		let button = UIButton(type: .system)
 		button.setTitle("Cancel", for: .normal)
 		button.titleLabel?.font = .systemFont(ofSize: 17)
-		button.setTitleColor(.systemPink, for: .normal)
+		button.setTitleColor(.MyTheme.crimson, for: .normal)
 		button.backgroundColor = .none
 		button.addTarget(self,
 						 action: #selector(didTapCancelButton(_:)),
@@ -72,7 +72,7 @@ class SignUpView: UIView {
 		button.setTitle("Sign Up", for: .normal)
 		button.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
 		button.setTitleColor(.white, for: .normal)
-		button.backgroundColor = .systemPink
+		button.backgroundColor = UIColor(red: 190, green: 40, blue: 35, alpha: 0.5)
 		button.layer.cornerRadius = 8
 		button.addTarget(self,
 						 action: #selector(didTapSignUpButton(_:)),
@@ -86,7 +86,6 @@ class SignUpView: UIView {
 		
 		backgroundColor = .white
 		
-		print("view init")
 		setupCancelButton()
 		setupTitleLabel()
 		setupEmailFieldLayout()
