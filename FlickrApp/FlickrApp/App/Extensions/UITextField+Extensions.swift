@@ -9,10 +9,10 @@ import UIKit
 
 extension UITextField {
 		
-	func makeUnderlinedTextField() {
+	func makeUnderlinedTextField(using color: UIColor = UIColor.MyTheme.coal) {
 		let bottomLine = CALayer()
 		bottomLine.frame = CGRect(x: 0, y: self.frame.height - 5, width: self.frame.width, height: 1)
-		bottomLine.backgroundColor = UIColor.darkGray.cgColor
+		bottomLine.backgroundColor = color.cgColor
 		self.borderStyle = UITextField.BorderStyle.none
 		self.layer.addSublayer(bottomLine)
 	}
