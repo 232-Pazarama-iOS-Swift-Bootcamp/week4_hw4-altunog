@@ -22,12 +22,9 @@ struct Photo: Codable {
 	let iconserver: String?
 	let iconfarm: Int?
 	let faveCount: String?
-	let urlN320: String?
-	let heightN: Int?
-	let widthN: Int?
-	let urlZ640: String?
-	let heightZ: Int?
-	let widthZ: Int?
+	let urlN320: String? = "https://www.flickr.com/images/buddyicon.gif"
+	let heightN: Int? = 48
+	let widthN: Int? = 48
 	
 	enum CodingKeys: String, CodingKey {
 		case id, owner, secret, server, farm, title, ispublic, isfriends, isfamily
@@ -36,32 +33,25 @@ struct Photo: Codable {
 		case urlN320 = "url_n"
 		case heightN = "height_n"
 		case widthN = "width_n"
-		case urlZ640 = "url_z"
-		case heightZ = "height_z"
-		case widthZ = "width_z"
 	}
 }
 
 extension Photo {
-//	var url500: URL? {
-//		guard let serverId = server, let id = id, let secret = secret else { return nil }
-//		guard let url = URL(string: "https://live.staticflickr.com/\(serverId)/\(id)_\(secret).jpg") else { return nil }
-//
-//		return url
-//	}
 	
 	var photoURL: URL {
-		URL(string: urlN320!)!
-//		URL(string: urlZ640!)!
-//		return url500!
+		if let urlString = urlN320,
+			let url = URL(string: urlString) {
+			return url
+		}
+		return URL(string: "https://www.flickr.com/images/buddyicon.gif")!
 	}
 	
 	var height: Double {
-		Double(heightN ?? 1)
+		Double(heightN ?? 48)
 	}
 	
 	var width: Double {
-		Double(widthN ?? .zero)
+		Double(widthN ?? 48)
 	}
 	
 	var ratio: CGFloat {

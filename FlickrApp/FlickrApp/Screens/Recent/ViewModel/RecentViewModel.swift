@@ -35,7 +35,6 @@ final class RecentViewModel {
 			case let .success(response):
 				do {
 					let photosResponse = try JSONDecoder().decode(PhotosResponse.self, from: response.data)
-//					print(String(data: response.data, encoding: .utf8))
 					self.photosResponse = photosResponse
 				} catch {
 					self.changeHandler?(.didErrorOccur(error))

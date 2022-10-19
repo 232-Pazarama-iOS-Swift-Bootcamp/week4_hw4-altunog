@@ -42,8 +42,8 @@ extension FlickrAPI: TargetType {
 			let params: [String: Any] = [
 				"method": "flickr.photos.getRecent",
 				"api_key": apiKey,
-				"extras": "owner_name,icon_farm,icon_server,url_z,url_n,count_faves",
-				"per_page": 10,
+				"extras": "owner_name,icon_farm,icon_server,url_n,count_faves",
+				"per_page": 20,
 				"page": 1,
 				"format": "json",
 				"nojsoncallback": 1
@@ -55,6 +55,9 @@ extension FlickrAPI: TargetType {
 				"api_key": apiKey,
 				"text": text,
 				"media": "photos",
+				"extras": "owner_name,icon_server,url_n",
+				"per_page": 33,
+				"page": 1,
 				"format": "json",
 				"nojsoncallback": 1
 			]

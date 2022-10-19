@@ -43,15 +43,6 @@ class RecentViewController: UIViewController {
 			}
 		}
     }
-	
-//	@objc func didTapFaveButton(_ button: UIButton) {
-//		button.setImage(UIImage(named: "heartfill"), for: .normal)
-//	}
-//
-//	@objc func didTapSaveButton(_ button: UIButton) {
-//		button.setImage(UIImage(named: "bookmarkfill_material"),
-//							for: .normal)
-//	}
 }
 
 extension RecentViewController: UITableViewDelegate {
@@ -73,8 +64,8 @@ extension RecentViewController: UITableViewDataSource {
 			fatalError("photo not found.")
 		}
 		
-		cell.delegate = self
 		cell.tintColor = .MyTheme.firebrick
+		cell.url = photo.photoURL
 		cell.usernameLabel.text = photo.username
 		cell.numberOfFavesLabel.text = (photo.faveCount ?? "0") + " favorites"
 		cell.userIconImageView.makeCircular()
@@ -94,12 +85,3 @@ extension RecentViewController: UITableViewDataSource {
 	}
 }
 
-extension RecentViewController: PostTableViewCellDelegate {
-	func didTapFaveButton(_ button: UIButton) {
-		print("faved")
-	}
-	
-	func didTapSaveButton(_ button: UIButton) {
-		print("saved")
-	}
-}
