@@ -22,9 +22,9 @@ struct Photo: Codable {
 	let iconserver: String?
 	let iconfarm: Int?
 	let faveCount: String?
-	let urlN320: String? = "https://www.flickr.com/images/buddyicon.gif"
-	let heightN: Int? = 48
-	let widthN: Int? = 48
+	let urlN320: String?
+	let heightN: Int?
+	let widthN: Int?
 	
 	enum CodingKeys: String, CodingKey {
 		case id, owner, secret, server, farm, title, ispublic, isfriends, isfamily
