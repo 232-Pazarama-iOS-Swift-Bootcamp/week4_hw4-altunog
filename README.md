@@ -1,5 +1,30 @@
 # Pazarama iOS Bootcamp - Hafta 4 - Ödev
 
+## Features
+
+* iOS 12 support
+* MVVM architecture
+* SnapKit & Xib
+* Cocoapods & SPM
+* FirebaseAuth: sign in and sign up
+* Firestore: saving user account info
+* Moya: getting images and their info usin Flickr API
+* Recent tab and Search tab
+
+
+## To be Improved
+
+* Profile tab
+* Firestore add photos to users' favorites and saves
+* FirebasAuth: sign out
+* IQKeyboardManager integration
+
+## Preview
+
+https://user-images.githubusercontent.com/53496232/196811485-4f75af60-2fb8-4b29-b003-29de29c123a9.mp4
+
+
+
 ## Flickr App
 
 Uygulamamızı geliştirirken Flickr API ve Firebase araçlarını kullanacağız. Uygulamada Firebase Auth ile kullanıcı kayıt ve giriş işlemlerini yöneteceğiz. Uygulamanın ana ekranında Flickr API’ı kullanarak son yüklenen fotoğrafları UITableViewController kullanarak listeleyeceğiz. Bu aşamada özelleşmiş bir UITableViewCell ile Instagram’daki post benzeri bir görünüm oluşturacağız. Kullanıcı görseli beğenebilir, kütüphanesine kaydedebilir ve profil ekranından önceden beğendiği veya kütüphaneye kaydettiği fotoğrafları görüntüleyebilir. Firebase firestore kullanılarak bilgiler buluta kaydedilmelidir.
