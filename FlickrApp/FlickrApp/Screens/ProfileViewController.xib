@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="FlickrApp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="xxV-QR-NRy" id="Amw-Zh-b5N"/>
+                <outlet property="imageView" destination="kzS-mA-8Wm" id="mJw-HP-1Y7"/>
+                <outlet property="segmentedControl" destination="X3O-PA-Ifo" id="2q0-cX-hci"/>
+                <outlet property="userIconImageView" destination="kzS-mA-8Wm" id="EJz-tA-Nr2"/>
+                <outlet property="usernameLabel" destination="lTC-bU-Teq" id="hIa-Cq-I7E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

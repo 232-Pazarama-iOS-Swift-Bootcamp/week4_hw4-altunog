@@ -9,7 +9,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
+
+	@IBOutlet weak var userIconImageView: UIImageView!
+	@IBOutlet weak var usernameLabel: UILabel!
+	
+	@IBOutlet weak var segmentedControl: UISegmentedControl!
+	
+	@IBOutlet weak var collectionView: UICollectionView!
+	override func viewDidLoad() {
         super.viewDidLoad()
 
 		title = "Profile"
