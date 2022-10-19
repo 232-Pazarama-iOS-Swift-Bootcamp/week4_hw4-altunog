@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.2)
   - IQKeyboardManagerSwift (6.5.10)
+  - Kingfisher (7.4.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - Kingfisher
   - Moya
   - SnapKit
 
@@ -16,15 +18,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManagerSwift
+    - Kingfisher
     - Moya
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Kingfisher: 596b207973051aae5e4c54a1c1cb39837ea10d36
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 225efceb2b8a522513f05cd56ef80de8ac78b105
+PODFILE CHECKSUM: 207f23ebb8b22f6e85bc6a6823327fb1641d5495
 
 COCOAPODS: 1.11.3

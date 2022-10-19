@@ -8,6 +8,7 @@
 import Foundation
 
 extension Encodable {
+	
 	var dictionary: [String: Any]? {
 		get throws {
 			let data = try JSONEncoder().encode(self)

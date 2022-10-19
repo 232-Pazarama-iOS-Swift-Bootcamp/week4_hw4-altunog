@@ -8,5 +8,6 @@ target 'FlickrApp' do
   # Pods for FlickrApp
 	pod 'SnapKit'
 	pod 'Moya'
+	pod 'Kingfisher'
 	pod 'IQKeyboardManagerSwift'
 end

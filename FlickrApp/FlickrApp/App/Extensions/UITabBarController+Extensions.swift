@@ -8,11 +8,13 @@
 import UIKit
 
 extension UITabBarController {
+	
 	func configureTabBarAppearance() {
-		self.setViewControllers(viewControllers, animated: true)
-		self.tabBar.itemPositioning = .centered
-		self.tabBar.backgroundColor = .MyTheme.smoke.withAlphaComponent(0.8)
-		self.tabBar.tintColor = .MyTheme.firebrick
-		self.modalPresentationStyle = .fullScreen
+		
+		setViewControllers(viewControllers, animated: true)
+		tabBar.itemPositioning = .centered
+		tabBar.backgroundColor = .MyTheme.smoke.withAlphaComponent(0.8)
+		tabBar.tintColor = .MyTheme.firebrick
+		modalPresentationStyle = .fullScreen
 	}
 }
